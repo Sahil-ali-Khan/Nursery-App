@@ -21,7 +21,8 @@ const userRoutes = require('./routes/users');
 const plantRoutes = require('./routes/plants');
 const reviewRoutes = require('./routes/reviews');
 //mongoose
-mongoose.connect('mongodb://localhost:27017/nursery',{
+const dbURL = process.env.DB_URL ||'mongodb://localhost:27017/nursery'
+mongoose.connect(dbURL,{
   useNewUrlParser:true,
   useCreateIndex:true,
   useUnifiedTopology:true,
@@ -91,6 +92,7 @@ app.use((err,req,res,next) =>{
   res.status(statusCode).render('error',{err});
 });
 
-app.listen(3000,()=>{
+const port = process.env.PORT || 3000;
+app.listen(port,()=>{
   console.log('listeningg')
 });
