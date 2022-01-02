@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate')%>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+<h1 class="indexHeading"><i class="fas fa-seedling"></i>   All Plants </h1>
+
+<main class="container mt-5">
+<div class="row mb-5 justify-content-center">
+
+    <% for(let plant of plants){%>
+      <div class="col-md-5">
+      <div class="card bg-dark text-white AllPlantShowCard">
+        <img src="<%=plant.images[0].url%>" class="card-img allPlantsImg " alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title plantName"><%=plant.name%></h5>
+          <p class="card-text plantPrice">&#8377;<%=plant.price%></p>
+          <p class="card-text"><a class="btn btn-primary" href="/plants/<%=plant._id%>">Details</a></p>
+        </div>
+      </div>
+      </div>
+    <%}%>
+  </div>
+</main>

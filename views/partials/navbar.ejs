@@ -1,0 +1,21 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Buland Nursery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active"  href="/">Home</a>
+        <a class="nav-link" href="/plants">All Plants</a>
+    </div>
+    <div class="navbar-nav login">
+      <% if(!currentUser){ %>
+      <a href="/login" class="nav-link">Login</a>
+      <a href="/register" class="nav-link">Sign up</a>
+      <%} else{%>
+      <a href="/logout" class="nav-link">Logout</a>
+      <%}%>
+    </div>
+  </div>
+</nav>

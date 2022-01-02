@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+  <h1 class="text-center">New Plant</h1>
+  <div class="col-6 offset-3">
+    <form  action="/plants" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="name">NAME</label>
+        <input class="form-control" type="text" name="plant[name]" value="" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="price">PRICE</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">&#8377</span>
+        <input type="text" id="price" class="form-control" name="plant[price]" placeholder="0.00" aria-label="Username" aria-describedby="basic-addon1" required>
+      </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">IMAGE(s)</label>
+        <p> <input type="file" name="image" value="" multiple> </p>
+      </div>
+
+      <!-- <div class="mb-3">
+        <label class="form-label" for="image">IMAGE URL</label>
+        <input class="form-control" type="text" name="plant[image]" value="" id="image" required>
+      </div> -->
+      <div class="mb-3">
+        <label class="form-label" for="description">DESCRIPTION</label>
+        <textarea class="form-control" type="text" name="plant[description]" value="" id="description" required></textarea>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success" type="submit">Add plant</button>
+      </div>
+      <footer>
+        <a href="/plants">ALL PLANTS</a>
+      </footer>
+    </form>
+  </div>
+</div>

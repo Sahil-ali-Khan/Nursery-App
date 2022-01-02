@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+  <h1 class="text-center">Edit Plant</h1>
+  <div class="col-6 offset-3">
+    <form class="validated-form" action="/plants/<%=plant._id%>?_method=PUT" method="POST" novalidate enctype="multipart/form-data">
+
+      <div class="mb-3">
+        <label class="form-label" for="name">NAME</label>
+        <input class="form-control" value="<%=plant.name%>" type="text" name="plant[name]" value="" id="name" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="price">PRICE</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">&#8377</span>
+          <input type="text" id="price" value="<%=plant.price%>" class="form-control" name="plant[price]" placeholder="0.00" aria-label="Username" aria-describedby="basic-addon1" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">DESCRIPTION</label>
+        <textarea class="form-control" type="text" name="plant[description]" id="description" required><%=plant.description%></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="image">ADD IMAGES</label>
+        <p> <input type="file" name="image" id="image" multiple> </p>
+        <!-- <input class="form-control" type="text" name="plant[image]" value="<%=plant.image%>" id="image" required> -->
+      </div>
+
+      <div className="mb-3">
+        <%plant.images.forEach(function(img,i){%>
+          <img src="<%=img.thumbnail%>" alt="" class="img-thumbnail">
+          <div className="form-check-inline ">
+            <input type="checkbox" name="deleteImages[]" value="<%=img.filename%>" id="image-<%=i%>">
+            <label for="image-<%=i%>">Delete</label>
+          </div>
+        <%})%>
+      </div>
+
+      <div class="mb-3">
+        <button class="btn  btn-dark" type="submit">Update plant</button>
+      </div>
+      <footer>
+        <a href="/plants/<%=plant._id%>">Back To Plant</a>
+      </footer>
+    </form>
+  </div>
+</div>

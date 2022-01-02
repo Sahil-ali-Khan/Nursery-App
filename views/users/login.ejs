@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/stylesheets/forms.css">
+
+<div class="col-sm-12 col-md-4 container">
+  <h1>Login</h1>
+  <form class="validated-form" action="/login" method="post" novalidate>
+    <div class="mb-3">
+      <label class="form-label" for="username">Username</label>
+      <input class="form-control" type="text" name="username" value="" id="username" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="password">Password</label>
+      <input class="form-control" type="password" name="password" value="" id="password" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Login</button>
+  </form>
+</div>

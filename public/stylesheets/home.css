@@ -1,0 +1,83 @@
+.imagePage{
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url("/images/home.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 46rem;
+}
+.intro{
+  margin-top: 30vh;
+  margin-bottom: 45vh;
+  background: none;
+}
+.nav{
+  display: inline-flex;
+}
+.inline{
+  display: flex;
+}
+.jumbotron{
+  float: left;
+}
+.navbar{
+  margin-left: auto;
+}
+.link1{
+  font-size: 1rem;
+  color: white;
+  border-bottom: 4px solid white;
+}
+.link1:hover{
+  color : white;
+}
+.links{
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  outline: none;
+  color: rgba(255,255,255,0.6);
+}
+.links:hover{
+  color: white;
+  border-bottom: 4px solid white;
+}
+.h11{
+  font-size: 3rem;
+  font-family:  'Raleway', sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+}
+.lead{
+  font-size: 23px;
+  font-weight: lighter;
+}
+.btn-light{
+  font-size: 1.5rem;
+}
+.btn-light:hover{
+  background: none;
+  color: white;
+}
+.jumbotron{
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+  color:black;
+  text-align: center;
+  background-color: #dbdde0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 7px;
+  box-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+
+}
+.jumbotron h1{
+  font-size: 3rem;
+}
+.blue{
+  background:black;
+}
+.bl.navbar ul li a{
+    color: #000000;
+}
